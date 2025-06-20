@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, Clock, ArrowRight, Tag, Search, Filter, BookOpen, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -146,7 +145,7 @@ export function BlogSection() {
         >
           {/* Search Bar */}
           <div className="relative max-w-md mx-auto">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+            <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4">🔍</span>
             <Input
               type="text"
               placeholder="Search posts..."
@@ -169,7 +168,7 @@ export function BlogSection() {
                 }}
                 className="glass"
               >
-                <Filter className="w-4 h-4 mr-2" />
+                <span className="mr-2">⚙️</span>
                 {category}
               </Button>
             ))}
@@ -229,16 +228,16 @@ export function BlogSection() {
                       <div className="flex items-center justify-between text-sm text-muted-foreground">
                         <div className="flex items-center space-x-4">
                           <div className="flex items-center space-x-1">
-                            <Calendar className="w-4 h-4" />
+                            <span>📅</span>
                             <span>{new Date(post.date).toLocaleDateString()}</span>
                           </div>
                           <div className="flex items-center space-x-1">
-                            <Clock className="w-4 h-4" />
+                            <span>⏱️</span>
                             <span>{post.readTime}</span>
                           </div>
                         </div>
                         <div className="flex items-center space-x-1">
-                          <BookOpen className="w-4 h-4" />
+                          <span>📖</span>
                           <span>{post.views}</span>
                         </div>
                       </div>
@@ -257,7 +256,6 @@ export function BlogSection() {
                       <div className="flex flex-wrap gap-2">
                         {post.tags.slice(0, 2).map((tag) => (
                           <Badge key={tag} variant="secondary" className="text-xs">
-                            <Tag className="w-3 h-3 mr-1" />
                             {tag}
                           </Badge>
                         ))}
@@ -273,7 +271,7 @@ export function BlogSection() {
                         <Button variant="ghost" size="sm" className="p-0 h-auto group/btn" asChild>
                           <Link href={`/blog/${post.slug}`}>
                             <span>Read More</span>
-                            <ArrowRight className="w-4 h-4 ml-1 group-hover/btn:translate-x-1 transition-transform" />
+                            <span className="ml-1 group-hover/btn:translate-x-1 transition-transform">→</span>
                           </Link>
                         </Button>
                       </div>
@@ -300,7 +298,7 @@ export function BlogSection() {
               disabled={currentPage === 1}
               className="glass"
             >
-              <ChevronLeft className="w-4 h-4" />
+              ←
             </Button>
             
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
@@ -322,7 +320,7 @@ export function BlogSection() {
               disabled={currentPage === totalPages}
               className="glass"
             >
-              <ChevronRight className="w-4 h-4" />
+              →
             </Button>
           </motion.div>
         )}
@@ -342,7 +340,7 @@ export function BlogSection() {
           >
             <Link href="/blog">
               View All Posts
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <span className="ml-2">→</span>
             </Link>
           </Button>
         </motion.div>
