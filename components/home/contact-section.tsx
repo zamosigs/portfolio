@@ -8,22 +8,33 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import Link from 'next/link';
+import { 
+  EmailIcon, 
+  PhoneIcon, 
+  MapPinIcon, 
+  GitHubIcon, 
+  LinkedInIcon, 
+  TwitterIcon, 
+  InstagramIcon, 
+  FacebookIcon,
+  SendIcon
+} from '@/components/ui/icons';
 
 const contactInfo = [
   {
-    icon: '✉️',
+    icon: EmailIcon,
     title: 'Email',
     content: 'zamosigs@gmail.com',
     href: 'mailto:zamosigs@gmail.com',
   },
   {
-    icon: '📞',
+    icon: PhoneIcon,
     title: 'Phone',
     content: '+92 334 0541809',
     href: 'tel:+923340541809',
   },
   {
-    icon: '📍',
+    icon: MapPinIcon,
     title: 'Location',
     content: 'Lahore, Pakistan',
     href: 'https://maps.google.com/?q=Lahore,Pakistan',
@@ -31,11 +42,11 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: '🔗', href: 'https://github.com/zamosigs', label: 'GitHub' },
-  { icon: '💼', href: 'https://www.linkedin.com/in/zamosigs/', label: 'LinkedIn' },
-  { icon: '🐦', href: 'https://x.com/zamosigs_pk?t=5puvPtSa5WPr16Tp3XyLLA&s=08', label: 'X (Twitter)' },
-  { icon: '📷', href: 'https://www.instagram.com/zamosigs.pk?igsh=b3VrbDMzdzR3YXU=', label: 'Instagram' },
-  { icon: '📘', href: 'https://www.facebook.com/share/19VTwxgxqZ/', label: 'Facebook' },
+  { icon: GitHubIcon, href: 'https://github.com/zamosigs', label: 'GitHub' },
+  { icon: LinkedInIcon, href: 'https://www.linkedin.com/in/zamosigs/', label: 'LinkedIn' },
+  { icon: TwitterIcon, href: 'https://x.com/zamosigs_pk?t=5puvPtSa5WPr16Tp3XyLLA&s=08', label: 'X (Twitter)' },
+  { icon: InstagramIcon, href: 'https://www.instagram.com/zamosigs.pk?igsh=b3VrbDMzdzR3YXU=', label: 'Instagram' },
+  { icon: FacebookIcon, href: 'https://www.facebook.com/share/19VTwxgxqZ/', label: 'Facebook' },
 ];
 
 export function ContactSection() {
@@ -108,7 +119,7 @@ export function ContactSection() {
                     className="flex items-center space-x-4 p-4 rounded-lg glass hover:bg-primary/10 transition-colors group"
                   >
                     <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
-                      <span className="text-2xl">{info.icon}</span>
+                      <info.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div>
                       <p className="font-medium">{info.title}</p>
@@ -137,7 +148,7 @@ export function ContactSection() {
                       rel="noopener noreferrer"
                       className="w-12 h-12 rounded-full glass flex items-center justify-center hover:scale-110 hover:bg-primary/20 transition-all"
                     >
-                      <span className="text-xl">{social.icon}</span>
+                      <social.icon className="w-5 h-5" />
                     </Link>
                   </motion.div>
                 ))}
@@ -221,8 +232,8 @@ export function ContactSection() {
                       'Sending...'
                     ) : (
                       <>
-                        <span>📤</span>
-                        <span className="ml-2">Send Message</span>
+                        <SendIcon className="w-4 h-4 mr-2" />
+                        Send Message
                       </>
                     )}
                   </Button>

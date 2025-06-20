@@ -5,6 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
+import { ExternalLinkIcon, GitHubIcon } from '@/components/ui/icons';
 
 const projects = [
   {
@@ -153,7 +154,7 @@ export function ProjectsSection() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <span className="mr-1 group-hover/btn:rotate-12 transition-transform">🔗</span>
+                          <ExternalLinkIcon className="w-3 h-3 mr-1 group-hover/btn:rotate-12 transition-transform" />
                           Demo
                         </Link>
                       </Button>
@@ -169,7 +170,7 @@ export function ProjectsSection() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <span className="group-hover/btn:rotate-12 transition-transform">🔗</span>
+                          <GitHubIcon className="w-3 h-3 group-hover/btn:rotate-12 transition-transform" />
                         </Link>
                       </Button>
                     </div>
@@ -197,7 +198,7 @@ export function ProjectsSection() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="mr-2">🔗</span>
+              <GitHubIcon className="w-5 h-5 mr-2" />
               View All Projects
             </Link>
           </Button>

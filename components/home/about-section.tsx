@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
+import { CodeIcon, MapPinIcon, CalendarIcon } from '@/components/ui/icons';
 
 const milestones = [
   {
@@ -62,12 +63,12 @@ export function AboutSection() {
             <div className="glass rounded-2xl p-8">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                  <span className="text-2xl">💻</span>
+                  <CodeIcon className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold">My Journey</h3>
                   <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                    <span>📍</span>
+                    <MapPinIcon className="w-4 h-4" />
                     <span>Lahore, Pakistan</span>
                   </div>
                 </div>
@@ -122,7 +123,7 @@ export function AboutSection() {
             className="space-y-8"
           >
             <h3 className="text-2xl font-semibold mb-8 flex items-center">
-              <span className="mr-3">📅</span>
+              <CalendarIcon className="w-6 h-6 mr-3 text-primary" />
               My Story
             </h3>
 

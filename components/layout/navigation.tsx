@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { DownloadIcon, SunIcon, MoonIcon, MenuIcon, XIcon } from '@/components/ui/icons';
 
 const navItems = [
   { name: 'Home', href: '#home' },
@@ -129,7 +130,7 @@ export function Navigation() {
                 link.click();
               }}
             >
-              <span>📄</span>
+              <DownloadIcon className="w-4 h-4" />
               <span>Resume</span>
             </Button>
 
@@ -139,9 +140,9 @@ export function Navigation() {
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             >
               {theme === 'dark' ? (
-                <span>☀️</span>
+                <SunIcon className="w-4 h-4" />
               ) : (
-                <span>🌙</span>
+                <MoonIcon className="w-4 h-4" />
               )}
             </Button>
 
@@ -152,9 +153,9 @@ export function Navigation() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? (
-                <span>✕</span>
+                <XIcon className="w-4 h-4" />
               ) : (
-                <span>☰</span>
+                <MenuIcon className="w-4 h-4" />
               )}
             </Button>
           </div>
@@ -191,7 +192,7 @@ export function Navigation() {
                     link.click();
                   }}
                 >
-                  <span>📄</span>
+                  <DownloadIcon className="w-4 h-4" />
                   <span>Resume</span>
                 </Button>
               </div>

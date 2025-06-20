@@ -2,14 +2,23 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { 
+  GitHubIcon, 
+  LinkedInIcon, 
+  EmailIcon, 
+  TwitterIcon, 
+  InstagramIcon, 
+  FacebookIcon,
+  HeartIcon
+} from '@/components/ui/icons';
 
 const socialLinks = [
-  { icon: '🔗', href: 'https://github.com/zamosigs', label: 'GitHub' },
-  { icon: '💼', href: 'https://www.linkedin.com/in/zamosigs/', label: 'LinkedIn' },
-  { icon: '✉️', href: 'mailto:zamosigs@gmail.com', label: 'Email' },
-  { icon: '🐦', href: 'https://x.com/zamosigs_pk?t=5puvPtSa5WPr16Tp3XyLLA&s=08', label: 'X (Twitter)' },
-  { icon: '📷', href: 'https://www.instagram.com/zamosigs.pk?igsh=b3VrbDMzdzR3YXU=', label: 'Instagram' },
-  { icon: '📘', href: 'https://www.facebook.com/share/19VTwxgxqZ/', label: 'Facebook' },
+  { icon: GitHubIcon, href: 'https://github.com/zamosigs', label: 'GitHub' },
+  { icon: LinkedInIcon, href: 'https://www.linkedin.com/in/zamosigs/', label: 'LinkedIn' },
+  { icon: EmailIcon, href: 'mailto:zamosigs@gmail.com', label: 'Email' },
+  { icon: TwitterIcon, href: 'https://x.com/zamosigs_pk?t=5puvPtSa5WPr16Tp3XyLLA&s=08', label: 'X (Twitter)' },
+  { icon: InstagramIcon, href: 'https://www.instagram.com/zamosigs.pk?igsh=b3VrbDMzdzR3YXU=', label: 'Instagram' },
+  { icon: FacebookIcon, href: 'https://www.facebook.com/share/19VTwxgxqZ/', label: 'Facebook' },
 ];
 
 export function Footer() {
@@ -45,7 +54,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full glass flex items-center justify-center hover:scale-110 transition-transform"
                 >
-                  <span className="text-lg">{social.icon}</span>
+                  <social.icon className="w-4 h-4" />
                 </Link>
               </motion.div>
             ))}
@@ -54,7 +63,7 @@ export function Footer() {
           {/* Copyright */}
           <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
             <span>© 2024 Ali Zain. Made with</span>
-            <span className="text-red-500">❤️</span>
+            <HeartIcon className="w-4 h-4 text-red-500" />
             <span>in Lahore, Pakistan</span>
           </div>
         </motion.div>

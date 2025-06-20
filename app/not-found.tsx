@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { EmailIcon, ArrowDownIcon } from '@/components/ui/icons';
 
 export default function NotFound() {
   return (
@@ -63,7 +64,7 @@ export default function NotFound() {
               asChild
             >
               <Link href="/">
-                <span className="w-5 h-5 mr-2">🏠</span>
+                <EmailIcon className="w-5 h-5 mr-2" />
                 Back to Home
               </Link>
             </Button>
@@ -74,7 +75,7 @@ export default function NotFound() {
               className="px-8 py-6 text-lg font-semibold group"
               onClick={() => window.history.back()}
             >
-              <span className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform">⬅️</span>
+              <ArrowDownIcon className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform rotate-90" />
               Go Back
             </Button>
           </motion.div>

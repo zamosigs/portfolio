@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { GitHubIcon, EmailIcon, ArrowDownIcon } from '@/components/ui/icons';
 
 const roles = [
   'Full Stack Developer',
@@ -124,7 +125,7 @@ export function HeroSection() {
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <span className="w-5 h-5 rotate-[-90deg]">↓</span>
+                  <ArrowDownIcon className="w-5 h-5 rotate-[-90deg]" />
                 </motion.div>
               </Link>
             </Button>
@@ -141,7 +142,7 @@ export function HeroSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="mr-2">🔗</span>
+                  <GitHubIcon className="w-5 h-5 mr-2" />
                   GitHub
                 </Link>
               </Button>
@@ -153,7 +154,7 @@ export function HeroSection() {
                 asChild
               >
                 <Link href="#contact">
-                  <span className="mr-2">✉️</span>
+                  <EmailIcon className="w-5 h-5 mr-2" />
                   Contact
                 </Link>
               </Button>
@@ -173,7 +174,7 @@ export function HeroSection() {
               className="flex flex-col items-center space-y-2 text-muted-foreground"
             >
               <span className="text-sm font-medium">Scroll to explore</span>
-              <span className="w-4 h-4">↓</span>
+              <ArrowDownIcon className="w-4 h-4" />
             </motion.div>
           </motion.div>
         </div>
