@@ -24,7 +24,7 @@ const projects = [
     image: 'https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=800',
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Supabase'],
     github: 'https://github.com/zamosigs/career-architects',
-    demo: 'https://career-architects.com',
+    demo: 'https://careerarchitects.com.pk',
     year: '2023',
     featured: true,
   },
