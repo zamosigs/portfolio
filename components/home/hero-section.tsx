@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowDown, Github, Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -125,7 +124,7 @@ export function HeroSection() {
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <ArrowDown className="w-5 h-5 rotate-[-90deg]" />
+                  <span className="w-5 h-5 rotate-[-90deg]">↓</span>
                 </motion.div>
               </Link>
             </Button>
@@ -142,7 +141,7 @@ export function HeroSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Github className="w-5 h-5 mr-2" />
+                  <span className="mr-2">🐙</span>
                   GitHub
                 </Link>
               </Button>
@@ -154,7 +153,7 @@ export function HeroSection() {
                 asChild
               >
                 <Link href="#contact">
-                  <Mail className="w-5 h-5 mr-2" />
+                  <span className="mr-2">✉️</span>
                   Contact
                 </Link>
               </Button>
@@ -174,7 +173,7 @@ export function HeroSection() {
               className="flex flex-col items-center space-y-2 text-muted-foreground"
             >
               <span className="text-sm font-medium">Scroll to explore</span>
-              <ArrowDown className="w-4 h-4" />
+              <span className="w-4 h-4">↓</span>
             </motion.div>
           </motion.div>
         </div>

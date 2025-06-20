@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Moon, Sun, Menu, X, Download } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -130,7 +129,7 @@ export function Navigation() {
                 link.click();
               }}
             >
-              <Download className="w-4 h-4" />
+              <span>📄</span>
               <span>Resume</span>
             </Button>
 
@@ -140,9 +139,9 @@ export function Navigation() {
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             >
               {theme === 'dark' ? (
-                <Sun className="w-4 h-4" />
+                <span>☀️</span>
               ) : (
-                <Moon className="w-4 h-4" />
+                <span>🌙</span>
               )}
             </Button>
 
@@ -153,9 +152,9 @@ export function Navigation() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? (
-                <X className="w-4 h-4" />
+                <span>✕</span>
               ) : (
-                <Menu className="w-4 h-4" />
+                <span>☰</span>
               )}
             </Button>
           </div>
@@ -192,7 +191,7 @@ export function Navigation() {
                     link.click();
                   }}
                 >
-                  <Download className="w-4 h-4" />
+                  <span>📄</span>
                   <span>Resume</span>
                 </Button>
               </div>

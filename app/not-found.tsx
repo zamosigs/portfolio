@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Home, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -64,7 +63,7 @@ export default function NotFound() {
               asChild
             >
               <Link href="/">
-                <Home className="w-5 h-5 mr-2" />
+                <span className="w-5 h-5 mr-2">🏠</span>
                 Back to Home
               </Link>
             </Button>
@@ -75,7 +74,7 @@ export default function NotFound() {
               className="px-8 py-6 text-lg font-semibold group"
               onClick={() => window.history.back()}
             >
-              <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
+              <span className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform">⬅️</span>
               Go Back
             </Button>
           </motion.div>

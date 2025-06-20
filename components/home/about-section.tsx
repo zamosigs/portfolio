@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Code, Coffee } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const milestones = [
@@ -63,12 +62,12 @@ export function AboutSection() {
             <div className="glass rounded-2xl p-8">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                  <Code className="w-6 h-6 text-primary" />
+                  <span className="text-2xl">💻</span>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold">My Journey</h3>
                   <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                    <MapPin className="w-4 h-4" />
+                    <span>📍</span>
                     <span>Lahore, Pakistan</span>
                   </div>
                 </div>
@@ -123,7 +122,7 @@ export function AboutSection() {
             className="space-y-8"
           >
             <h3 className="text-2xl font-semibold mb-8 flex items-center">
-              <Calendar className="w-6 h-6 mr-3 text-primary" />
+              <span className="mr-3">📅</span>
               My Story
             </h3>
 

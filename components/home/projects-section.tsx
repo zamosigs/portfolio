@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Calendar } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -154,7 +153,7 @@ export function ProjectsSection() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <ExternalLink className="w-3 h-3 mr-1 group-hover/btn:rotate-12 transition-transform" />
+                          <span className="mr-1 group-hover/btn:rotate-12 transition-transform">🔗</span>
                           Demo
                         </Link>
                       </Button>
@@ -170,7 +169,7 @@ export function ProjectsSection() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <Github className="w-3 h-3 group-hover/btn:rotate-12 transition-transform" />
+                          <span className="group-hover/btn:rotate-12 transition-transform">🐙</span>
                         </Link>
                       </Button>
                     </div>
@@ -198,8 +197,8 @@ export function ProjectsSection() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Github className="w-5 h-5 mr-2" />
-              View More Projects
+              <span className="mr-2">🐙</span>
+              View All Projects
             </Link>
           </Button>
         </motion.div>

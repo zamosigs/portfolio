@@ -1,16 +1,15 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import { Heart, Github, Linkedin, Mail, Twitter, Instagram, Facebook } from 'lucide-react';
 import Link from 'next/link';
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com/zamosigs', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://www.linkedin.com/in/zamosigs/', label: 'LinkedIn' },
-  { icon: Mail, href: 'mailto:zamosigs@gmail.com', label: 'Email' },
-  { icon: Twitter, href: 'https://x.com/zamosigs_pk?t=5puvPtSa5WPr16Tp3XyLLA&s=08', label: 'X (Twitter)' },
-  { icon: Instagram, href: 'https://www.instagram.com/zamosigs.pk?igsh=b3VrbDMzdzR3YXU=', label: 'Instagram' },
-  { icon: Facebook, href: 'https://www.facebook.com/share/19VTwxgxqZ/', label: 'Facebook' },
+  { icon: '🐙', href: 'https://github.com/zamosigs', label: 'GitHub' },
+  { icon: '💼', href: 'https://www.linkedin.com/in/zamosigs/', label: 'LinkedIn' },
+  { icon: '✉️', href: 'mailto:zamosigs@gmail.com', label: 'Email' },
+  { icon: '🐦', href: 'https://x.com/zamosigs_pk?t=5puvPtSa5WPr16Tp3XyLLA&s=08', label: 'X (Twitter)' },
+  { icon: '📷', href: 'https://www.instagram.com/zamosigs.pk?igsh=b3VrbDMzdzR3YXU=', label: 'Instagram' },
+  { icon: '📘', href: 'https://www.facebook.com/share/19VTwxgxqZ/', label: 'Facebook' },
 ];
 
 export function Footer() {
@@ -46,7 +45,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full glass flex items-center justify-center hover:scale-110 transition-transform"
                 >
-                  <social.icon className="w-4 h-4" />
+                  <span className="text-lg">{social.icon}</span>
                 </Link>
               </motion.div>
             ))}
@@ -55,7 +54,7 @@ export function Footer() {
           {/* Copyright */}
           <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
             <span>© 2024 Ali Zain. Made with</span>
-            <Heart className="w-4 h-4 text-red-500" />
+            <span className="text-red-500">❤️</span>
             <span>in Lahore, Pakistan</span>
           </div>
         </motion.div>
