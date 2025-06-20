@@ -31,7 +31,7 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: '🐙', href: 'https://github.com/zamosigs', label: 'GitHub' },
+  { icon: '🔗', href: 'https://github.com/zamosigs', label: 'GitHub' },
   { icon: '💼', href: 'https://www.linkedin.com/in/zamosigs/', label: 'LinkedIn' },
   { icon: '🐦', href: 'https://x.com/zamosigs_pk?t=5puvPtSa5WPr16Tp3XyLLA&s=08', label: 'X (Twitter)' },
   { icon: '📷', href: 'https://www.instagram.com/zamosigs.pk?igsh=b3VrbDMzdzR3YXU=', label: 'Instagram' },

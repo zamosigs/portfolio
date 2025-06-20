@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 const socialLinks = [
-  { icon: '🐙', href: 'https://github.com/zamosigs', label: 'GitHub' },
+  { icon: '🔗', href: 'https://github.com/zamosigs', label: 'GitHub' },
   { icon: '💼', href: 'https://www.linkedin.com/in/zamosigs/', label: 'LinkedIn' },
   { icon: '✉️', href: 'mailto:zamosigs@gmail.com', label: 'Email' },
   { icon: '🐦', href: 'https://x.com/zamosigs_pk?t=5puvPtSa5WPr16Tp3XyLLA&s=08', label: 'X (Twitter)' },

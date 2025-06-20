@@ -169,7 +169,7 @@ export function ProjectsSection() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <span className="group-hover/btn:rotate-12 transition-transform">🐙</span>
+                          <span className="group-hover/btn:rotate-12 transition-transform">🔗</span>
                         </Link>
                       </Button>
                     </div>
@@ -197,7 +197,7 @@ export function ProjectsSection() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="mr-2">🐙</span>
+              <span className="mr-2">🔗</span>
               View All Projects
             </Link>
           </Button>

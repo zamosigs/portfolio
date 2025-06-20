@@ -141,7 +141,7 @@ export function HeroSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="mr-2">🐙</span>
+                  <span className="mr-2">🔗</span>
                   GitHub
                 </Link>
               </Button>
