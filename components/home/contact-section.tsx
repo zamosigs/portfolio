@@ -30,8 +30,8 @@ const contactInfo = [
   {
     icon: PhoneIcon,
     title: 'Phone',
-    content: '+92 334 0541809',
-    href: 'tel:+923340541809',
+    content: '+92 316 7481391',
+    href: 'tel:+923167481391',
   },
   {
     icon: MapPinIcon,
